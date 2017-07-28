@@ -1,0 +1,11 @@
+\begin{figure}
+		\centering
+		\begin{subfigure}[Blockschaltbild in TwinCAT 3-Entwicklungsumgebung: die Onlinewerte jedes Ein- und Ausgangs vom Block und Unterblock können auf der Signalverbindungen gezeigt.]{\linewidth}
+		\includegraphics[width=15.5cm]{bild/30_32/test0_ohne_k_ori_u.pdf}\label{fig:Doppelintegrator_ohne_k_u}
+		\end{subfigure}
+		%\hspace{0.1in}
+		\begin{subfigure}[Die echte Rechenzeit der Steuerung: die Ordinatenachse steht für die CPU Rechenzeit zwischen $80\mu s$ und $150\mu s$, dagegen ist die Abszissenachse die Laufzeit des Tasks.]{\linewidth}
+		\includegraphics[width=15.5cm]{bild/30_32/test0_mit_k_ori_u.pdf}\label{fig:Doppelintegrator_mit_k_u}
+		\end{subfigure}
+		\caption{Online-Ergebnisse von der Steuerung}
+	\end{figure} 
