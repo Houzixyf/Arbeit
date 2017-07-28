@@ -164,6 +164,8 @@ $\matr{I}$ ist die Einheitsmatrix, $\mu$ ist der Dämpfungsparameter.Aufgrund de
 \label{Erweiterung_von_PyTrajectory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Pytrajectory ist ein Python Paket zum Trajektorie-Entwurf mit gegebenen Randwertbedingungen (Anfangs- und Endwerte der Systemzuständen sowie Eingängen) für nicht lineares System. Das Paket ist auf Python 2.Version entwickelt. Für weitere Informationen kann man \href{https://pytrajectory.readthedocs.io/en/master/guide/about.html}{Pytrajectory} klicken.\\
+\subsection{Optimale Überführungszeit}
+\label{Optimale_Überführungszeit}
 Eine Aufgabe bei der Erweiterung von PyTrajectory liegt darin, die Überführungszeit der Trajektorienplanung eines Systems zu berücksichtigen. 
 Es ist gehofft, die Überführungszeit $T$ nicht vom Nutzer explizit vorgegeben wird, sondern anhand der Systemgleichungen mit Levenberg-Marquadt-Methode automatisch optimiert wird. Anfangspunkt ist die Ansetzung der Zeittransformation von $t = t$ zum $t = k\tau$, womit $k$ eine zusätzliche freie Parameter (ohne Einheit) ist. Dann folgt die untere Gleichungtransformation:
 \begin{eqnarray}
@@ -204,7 +206,7 @@ Zur Überprüfung der Rationalität werden zwei Beispiele gebietet. Für jedes B
 	\begin{figure}
 		\centering
 		\includegraphics[width=15.5cm]{bild/30_32/test0_mit_k_ori_x.pdf}
-		\caption{Verlauf des Systemeingangs vom System mit der Wirkung von k. $u_{1}$ steht für Waagebeschleunigung.}
+		\caption{Verlauf des Systemeingangs vom System mit der Wirkung von k. $u_{1}$ steht für Wagenbeschleunigung.}
 		\label{fig:Doppelintegrator_mit_k_x}
 	\end{figure}
 	\begin{figure}
@@ -236,11 +238,11 @@ Dieses Beispiel zeigt die starke Abhängigkeit der Konvergenzmöglichkeit von Le
 Das folgende Beispiel stellt die Anwendung der LM-Methode in einem verbreiterten Benchmark System vor.
 
 \begin{beispiel}[System–Inverses-Pendel]
-	Abb. \ref{fig:Inverses-Pendel} zeigt das Schema des inversen Pendels. Der Pendelarm ist auf einem horizontal bewegten Wagen montiert. Der Wagen bringt daher eine horizontale Kraft auf das Pendel auf. Beim Aufprägen der Kraft $\vec{F}$ auf den Wagen bewegt sich das Pendel. Die instabile Ruhelage ist der Punkt, in dem das Pendel genau senkrecht zum Wagen steht und der Drehwinkel $180^{\circ}$ beträgt. Systemzustandsvariable in diesem Modell sind die Wagenposition $\vect{x}_{1}$, dessen Geschwindigkeit $\vect{x}_{2}$, der Pendeldrehwinkel $\vect{x}_{3}$, die Drehgeschwindigkeit davon $\vect{x}_{4}$. Der einzige Systemeingang ist die auf den Wagen aufgeprägte Kraft $f_{w}$.
+	Abb. \ref{fig:Inverses-Pendel} zeigt das Schema des inversen Pendels. Der Pendelarm ist auf einem horizontal bewegten Wagen montiert. Der Wagen bringt daher eine horizontale Kraft auf das Pendel auf. Beim Aufprägen der Kraft $\vec{F}$ auf den Wagen bewegt sich das Pendel von oben nach unten. Die instabile Ruhelage ist der Punkt, in dem das Pendel genau senkrecht zum Wagen steht und der Drehwinkel $180^{\circ}$ beträgt. Systemvariable in diesem Modell sind die Wagenposition $\vect{x}_{1}$, dessen Geschwindigkeit $\vect{x}_{2}$, der Pendeldrehwinkel $\vect{x}_{3}$, die Drehgeschwindigkeit davon $\vect{x}_{4}$. Der einzige Systemeingang ist die auf den Wagen aufgeprägte Kraft $f_{w}$.
 	\begin{figure}
 		\centering
 		\includegraphics[width=6cm]{bild/modul/Inverses-Pendel.eps}
-		\caption{Struktur des inversen Pendels: in dem System gibt es vier Zustände $\vec{x}_{1}$ bis $\vec{x}_{4}$. Das Pendel folgt einer gegebenen Trajektorie und bewegt sich von $180^{\circ}$ bis zur instabilen Ruhelage (nämlich vom ganz unten zu ganz oben). $m_{w}$ und $m_{p}$ sind jeweils die Masse des Wagens und des Pendels, $J_{p}$ ist das Trägheitsmoment und $l_{p}$ ist der Abstand zwischen dem Stützpunkt und dem Pendelschwerpunkt. Die Pfeile unter Zuständen geben die Vektorrichtung an.}
+		\caption{Struktur des inversen Pendels: in dem System gibt es vier Zustände $\vec{x}_{1}$ bis $\vec{x}_{4}$. Das Pendel folgt einer gegebenen Trajektorie und bewegt sich von $180^{\circ}$ bis zur instabilen Ruhelage (nämlich vom ganz unten zu ganz oben). $m_{w}$ und $m_{p}$ sind jeweils die Masse des Wagens und des Pendels, $J_{p}$ ist das Trägheitsmoment und $l_{p}$ ist der Abstand zwischen dem Stützpunkt und dem Pendelschwerpunkt. Die Pfeile neben Zuständen geben die Vektorrichtung an.}
 		\label{fig:Inverses-Pendel}
 	\end{figure}  
 
@@ -261,7 +263,7 @@ Das folgende Beispiel stellt die Anwendung der LM-Methode in einem verbreiterten
 	\dot{x}_{4}&=&\frac{sin(x_{3})(-m_{p}l_{p}x_{4}^{2}cos(x_{3})+g(m_{w}+m_{p}))}{m_{w}l_{p}+m_{p}sin^{2}(x_{3})}+\frac{cos(x_{3})}{m_{w}l_{p}+m_{p}sin^{2}(x_{3})}u\label{eq:DLG_Inverses_Pendel_compact}   
 	\end{eqnarray}
 	
-	Wenn das System partiell linearisiert und einen virtuellen Eingang, die Beschleunigung des Wagens $\dot{x}_{2}$ anstatt der Kraft $u$ gegeben wird, lässt sich die Systemdarstellung vielmehr einfacher:
+	Wenn das System partiell linearisiert und einen virtuellen Eingang, die Beschleunigung des Wagens $\dot{x}_{2}$ anstatt der Kraft $u$ gegeben wird, lässt sich die Systemdarstellung vielmehr einfacher darstellen:
 	\begin{eqnarray}
 	\dot{x}_{1}&=&x_{2}\notag\\
 	\dot{x}_{2}&=&u\notag\\
@@ -274,28 +276,28 @@ Das folgende Beispiel stellt die Anwendung der LM-Methode in einem verbreiterten
 	\begin{figure}
 		\centering
 		\includegraphics[width=15.5cm]{bild/30_32/example0_ohne_k_x.pdf}
-		\caption{Systemzuständen des inversen-Pendels (ohne k) mit der Kraft als Systemeingang.}
+		\caption{Systemzuständen des inversen-Pendels (ohne k) mit dem virtuellen Eingang.}
 		\label{fig:Inverses_Pendel_ohne_k_x}
 	\end{figure}
 
 	\begin{figure}
 		\centering
 		\includegraphics[width=12cm]{bild/30_32/example0_ohne_k_u.pdf}
-		\caption{Systemeingang des inversen-Pendels (ohne k) mit der Kraft als Eingang.}
+		\caption{Systemeingang des inversen-Pendels (ohne k) mit dem virtuellen Eingang.}
 		\label{fig:Inverses_Pendel_ohne_k_u}
 	\end{figure}
 
 	\begin{figure}
 		\centering
 		\includegraphics[width=15.5cm]{bild/30_32/example0_mit_k_x_ori.pdf}
-		\caption{Systemzustände des inversen-Pendels (mit k) mit der Kraft als Systemeingang.}
+		\caption{Systemzustandskurven des inversen-Pendels (mit k) mit dem virtuellen Eingang.}
 		\label{fig:Inverses_Pendel_mit_k_x_ori}
 	\end{figure}
 	
 	\begin{figure}
 		\centering
 		\includegraphics[width=12cm]{bild/30_32/example0_mit_k_u_ori.pdf}
-		\caption{Systemeingang des inversen-Pendels (mit k) mit der Kraft als Eingang.}
+		\caption{Systemeingang des inversen-Pendels (mit k) mit dem virtuellen Eingang. Die maximale Beschleunigung trägt circa $12m/s^{2}$ und nur Hälfte des Wertes in Abb. \ref{fig:Inverses_Pendel_ohne_k_u}.}
 		\label{fig:Inverses_Pendel_mit_k_u_ori}
 	\end{figure}
 	
@@ -306,19 +308,22 @@ Das folgende Beispiel stellt die Anwendung der LM-Methode in einem verbreiterten
 	\begin{figure}
 		\centering
 		\includegraphics[width=15.5cm]{bild/30_32/example0_mit_k_x_con.pdf}
-		\caption{Systemzustände des inversen-Pendels (mit k) mit der Kraft als Systemeingang.}
+		\caption{Systemzustände des inversen-Pendels (mit k) mit dem virtuellen Eingang. $x_{1}$ ist zwischen ()$-0.2$, $0.4$) eingeschränkt.}
 		\label{fig:Inverses_Pendel_mit_k_x_con}
 	\end{figure}
 	
 	\begin{figure}
 		\centering
 		\includegraphics[width=12cm]{bild/30_32/example0_mit_k_u_con.pdf}
-		\caption{Systemeingang des inversen-Pendels (mit k) mit der Kraft als Eingang.}
+		\caption{Systemeingang des inversen-Pendels (mit k) mit dem virtuellen Eingang.}
 		\label{fig:Inverses_Pendel_mit_k_u_con}
 	\end{figure}
 
 \end{beispiel}
 \newpage
 Zusammengefasst aus obere Beispiele kann das System unter Berücksichtigung der Überführungszeit eine sparsamere Trajektorie eingeplant werden, sofern gute Anfangswerte des Polynomparameter vorgegeben werden. Aber praktisch ist es nicht so einfach, einige geeignete Anfangswerte zu finden. Deswegen wird eine Gütefunktion von k zur Verbesserung des Überführungszeitalgorithmus entworfen, dass im nächsten Subschnitt beschrieben wird.
+\subsection{Gütefunktion von k}
+\label{Gütefunktion_von_k}
+
 
 
