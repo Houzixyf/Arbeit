@@ -308,7 +308,7 @@ Das folgende Beispiel stellt die Anwendung der LM-Methode in einem verbreiterten
 	\begin{figure}
 		\centering
 		\includegraphics[width=15.5cm]{bild/30_32/example0_mit_k_x_con.pdf}
-		\caption{Systemzustände des inversen-Pendels (mit k) mit dem virtuellen Eingang. $x_{1}$ ist zwischen ()$-0.2$, $0.4$) eingeschränkt.}
+		\caption{Systemzustände des inversen-Pendels (mit k) mit dem virtuellen Eingang. $x_{1}$ ist zwischen ($-0.2$, $0.4$) eingeschränkt.}
 		\label{fig:Inverses_Pendel_mit_k_x_con}
 	\end{figure}
 	
@@ -321,9 +321,20 @@ Das folgende Beispiel stellt die Anwendung der LM-Methode in einem verbreiterten
 
 \end{beispiel}
 \newpage
-Zusammengefasst aus obere Beispiele kann das System unter Berücksichtigung der Überführungszeit eine sparsamere Trajektorie eingeplant werden, sofern gute Anfangswerte des Polynomparameter vorgegeben werden. Aber praktisch ist es nicht so einfach, einige geeignete Anfangswerte zu finden. Deswegen wird eine Gütefunktion von k zur Verbesserung des Überführungszeitalgorithmus entworfen, dass im nächsten Subschnitt beschrieben wird.
+Zusammengefasst aus obere Beispiele kann das System unter Berücksichtigung der Überführungszeit eine sparsamere Trajektorie eingeplant werden, sofern gute Anfangswerte des Polynomparameter vorgegeben werden. Aber praktisch ist es nicht so einfach, einige geeignete Anfangswerte zu finden. Deswegen wird einige zusätzliche Bedingungen für k zur Verbesserung des Überführungszeitalgorithmus entworfen, dass im nächsten Subschnitt beschrieben wird.
 \subsection{Gütefunktion von k}
 \label{Gütefunktion_von_k}
-
-
-
+Die Gütefunktion ist eine Kombination von Parabel-und Nullfunktion. In dem von den zwei Eingänge($x_{min}$ und $x_{max}$) definierten Definitionsmenge ist die Zielmenge in der Nähe von 0. Dagegen gilt der Bildwert außerhalb diesem Bereich ähnlich wie $(x-x_{mid})^{2}$ mit $x_{mid}$ dem Mittelwert von $x_{max}$ und $x_{min}$. Die konkrete Form von \emph{pe-Funktion} ist:
+\begin{eqnarray}
+	pe = \frac{(x-x_{mid})^{2}}{1 + e^{5\cdot (x-x_{min})}} + \frac{(x-x_{mid})^{2}}{1 + e^{5\cdot (x_{max}-x)}}\label{eq:Gütefunktion}     
+\end{eqnarray}
+Ein Beispiel der Kurven von \emph{pe} mit $x_{min}=0$ und $x_{max}=10$ ist wie Abb.\ref{fig:Gütefunktion_von_k} gezeigt. Zwischen $(0,10)$ ist $pe$ ungefähr 0. Der andere Teil läuft wie eine Parabel. Mit dieser Gütefunktion von $k$ probiert das System eine Lösung in der Nähe von $x_{mid}$ zu finden.
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm]{bild/pe/pe.pdf}
+	\caption{Gütefunktion von k: $x_{min}=0$, $x_{max}=10$}
+	\label{fig:Gütefunktion_von_k}
+\end{figure}
+\begin{beispiel}
+	Geht man zurück auf das Beispiel Doppelintegrator. Angenommen, dass $x_{min}$ und $x_{max}$ jeweils $1$ und $2$.
+\end{beispiel}
