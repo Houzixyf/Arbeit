@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.8)  31 JUL 2017 17:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.8)  31 JUL 2017 18:51
 entering extended mode
 **ArbeitRST.tex
 (ArbeitRST.tex
@@ -1812,11 +1812,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
- 12765 strings out of 493673
- 202509 string characters out of 3141537
+ 12769 strings out of 493673
+ 202551 string characters out of 3141537
  408168 words of memory out of 3000000
  15572 multiletter control sequences out of 15000+200000
- 114384 words of font info for 173 fonts, out of 3000000 for 9000
+ 114600 words of font info for 175 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  52i,13n,82p,1186b,566s stack positions out of 5000i,500n,10000p,200000b,50000s
 {e:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{e:/Program F
@@ -1842,9 +1842,9 @@ Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><e:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><e:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/lm/lmsy8.pfb><e:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on ArbeitRST.pdf (22 pages, 673803 bytes).
+Output written on ArbeitRST.pdf (22 pages, 677384 bytes).
 PDF statistics:
- 801 PDF objects out of 1000 (max. 8388607)
+ 805 PDF objects out of 1000 (max. 8388607)
  78 named destinations out of 1000 (max. 500000)
  29327 words of extra memory for PDF output out of 29859 (max. 10000000)
 
