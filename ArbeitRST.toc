@@ -1,11 +1,15 @@
 \select@language {ngerman}
 \select@language {ngerman}
-\contentsline {chapter}{\numberline {1}Theorie}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Erl\IeC {\"a}uterung zur Brockett-Bedingung}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Methode zur L\IeC {\"o}sung des Quadratmittelproblems}{3}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Gau\IeC {\ss }-Newton-Verfahren}{4}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Levenberg-Marquadt-Algorithmus}{4}{subsection.1.2.2}
-\contentsline {section}{\numberline {1.3}Erweiterung von PyTrajectory}{5}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Optimale \IeC {\"U}berf\IeC {\"u}hrungszeit}{5}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}G\IeC {\"u}tefunktion von k}{15}{subsection.1.3.2}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{17}{chapter*.16}
+\contentsline {chapter}{\numberline {1}Levenberg-Maquadrat-Methode}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Methode zur L\IeC {\"o}sung des Quadratmittelproblems}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Gau\IeC {\ss }-Newton-Verfahren}{1}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Levenberg-Marquadt-Algorithmus}{2}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Erweiterung von PyTrajectory}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Optimale \IeC {\"U}berf\IeC {\"u}hrungszeit}{3}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Bereichgrenzung von k}{13}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}G\IeC {\"u}tefunktion von k}{13}{subsection.1.2.3}
+\contentsline {chapter}{\numberline {2}Brockett-Bedingung f\IeC {\"u}r unteraktuiertes mechanisches System}{15}{chapter.2}
+\contentsline {section}{\numberline {2.1}Erl\IeC {\"a}uterung zur Brockett-Bedingung}{15}{section.2.1}
+\contentsline {section}{\numberline {2.2}Ausgang: Doppelintegrator}{17}{section.2.2}
+\contentsline {section}{\numberline {2.3}Unteraktuiertes mechanisches System}{18}{section.2.3}
+\contentsline {section}{\numberline {2.4}Ausgang: Zwei-Gelenke-Manipulator}{18}{section.2.4}

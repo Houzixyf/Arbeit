@@ -1,9 +1,13 @@
-\BOOKMARK [0][-]{chapter.1}{Theorie}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Erl\344uterung zur Brockett-Bedingung}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Methode zur L\366sung des Quadratmittelproblems}{chapter.1}% 3
-\BOOKMARK [2][-]{subsection.1.2.1}{Gau\337-Newton-Verfahren}{section.1.2}% 4
-\BOOKMARK [2][-]{subsection.1.2.2}{Levenberg-Marquadt-Algorithmus}{section.1.2}% 5
-\BOOKMARK [1][-]{section.1.3}{Erweiterung von PyTrajectory}{chapter.1}% 6
-\BOOKMARK [2][-]{subsection.1.3.1}{Optimale \334berf\374hrungszeit}{section.1.3}% 7
-\BOOKMARK [2][-]{subsection.1.3.2}{G\374tefunktion von k}{section.1.3}% 8
-\BOOKMARK [0][-]{chapter*.16}{Literaturverzeichnis}{}% 9
+\BOOKMARK [0][-]{chapter.1}{Levenberg-Maquadrat-Methode}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Methode zur L\366sung des Quadratmittelproblems}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Gau\337-Newton-Verfahren}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Levenberg-Marquadt-Algorithmus}{section.1.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Erweiterung von PyTrajectory}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.2.1}{Optimale \334berf\374hrungszeit}{section.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.2.2}{Bereichgrenzung von k}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.3}{G\374tefunktion von k}{section.1.2}% 8
+\BOOKMARK [0][-]{chapter.2}{Brockett-Bedingung f\374r unteraktuiertes mechanisches System}{}% 9
+\BOOKMARK [1][-]{section.2.1}{Erl\344uterung zur Brockett-Bedingung}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{Ausgang: Doppelintegrator}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.3}{Unteraktuiertes mechanisches System}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.4}{Ausgang: Zwei-Gelenke-Manipulator}{chapter.2}% 13
